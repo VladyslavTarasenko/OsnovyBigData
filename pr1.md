@@ -1,3 +1,6 @@
+Набір: дані щодо пачажирів титаніку
+Аналіз: критерії виживаємості пассажирів човна
+
 ```R
 
 library(ggplot2)
@@ -41,7 +44,7 @@ test <- full[892:1309,]
 # Set a random seed
 set.seed(754)
 
-# Build the model (note: not all possible variables are used)
+# Build the model 
 rf_model <- randomForest(factor(Survived) ~ Pclass + Sex + Age + SibSp + Parch + Fare + Embarked,
                          data = train)
 
